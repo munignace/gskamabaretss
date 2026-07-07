@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Web assignment">
+        <meta name="author" content="Ignace">
+        <meta name="keywords" content="HTML,Migera website by Ignace">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+        <title>Groupe Scolaire Kamabare </title>
+        <link rel="icon" type="image/jpeg" href="gs_kamabare_logo.jpg">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="logo-wrapper">
+                    <img src="gs_kamabare_logo.JPG" alt="present school logo" class="navbar-brand-logo">
+                    <h1 id="navbar-logo">GS KAMABARE TSS</h1>
+                </div>
+                
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="admission.html" class="nav-links">Admission</a></li>
+                    <li><a href="ict_tools.html" target="_blank" class="nav-links">Library</a></li>
+                    <li><a href="elearning.html" class="nav-links">E-learning</a></li>
+                    <li><a href="#" class="nav-links nav-links-outline">LOGIN</a></li>
+                    <li><a href="#" class="nav-links nav-links-btn">SIGN UP</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img id="home_page" name="slide" alt="School Slideshow"> 
+        <div class="static-slider-caption">
+            <h2 class="caption-line-1">Together We Inspire Excellence</h2>
+            <p class="caption-line-2">Building Knowledge, Character, and Success</p>
+        </div>
+
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                    </svg>
+                </div>
+                <h3>TVET Trades</h3>
+                <p>Explore our specialized technical options including Electrical Technology, Building Construction, Software Development, Computer Systems, and practical engineering trades.</p>
+                <a href="programs.html" class="learn-more-btn">Learn More →</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zm0-8h14V7H7v2z"/>
+                    </svg>
+                </div>
+                <h3>Admission Criteria</h3>
+                <p>Find out target requirements for enrolling into our advanced technical tracks, national examination cuts, and registration documents.</p>
+                <a href="admission.html" class="learn-more-btn">Learn More →</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+                    </svg>
+                </div>
+                <h3>Academic Resources</h3>
+                <p>Access our digital workspace portals, downloadable ICT tools setups, standard modules guidelines, and event calendars.</p>
+                <a href="resources.html" class="learn-more-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="activities-section-wrapper">
+            <div class="activities-header">
+                <h2 class="activities-main-title">Key GS Kamabare Activities & Core Highlights</h2>
+                <div class="carousel-controls">
+                    <button class="control-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="control-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="activityTrack">
+                    <div class="activity-card-item">
+                        <img src="CPD.jpg" alt="Continuous Professional Development" class="activity-card-img">
+                        <div class="activity-card-body">
+                            <h3>Continuous Professional Development (CPD)</h3>
+                            <p>Equipping trainers and instructors with innovative pedagogical approaches and technology integration strategies to effectively deliver Rwanda's competency-based curriculum standards.</p>
+                            <a href="#" class="read-more-link">Read more →</a>
+                        </div>
+                    </div>
+                    <div class="activity-card-item">
+                        <img src="umuganda.jpg" alt="Umuganda Community Work" class="activity-card-img">
+                        <div class="activity-card-body">
+                            <h3>Community Work & Values (Umuganda)</h3>
+                            <p>Fostering homegrown solutions, environmental sustainability, and patriotic values among students through collaborative school community outreach and infrastructure maintenance.</p>
+                            <a href="#" class="read-more-link">Read more →</a>
+                        </div>
+                    </div>
+                    <div class="activity-card-item">
+                        <img src="learning.jpg" alt="Practical Learning" class="activity-card-img">
+                        <div class="activity-card-body">
+                            <h3>Practical Competency-Based Learning</h3>
+                            <p>Empowering future TVET professionals with hands-on technical skills, lab experiments, and collaborative problem-solving to meet competitive national market demands.</p>
+                            <a href="#" class="read-more-link">Read more →</a>
+                        </div>
+                    </div>
+                    <div class="activity-card-item">
+                        <img src="entertainment.jpeg" alt="Creative Talents & Entertainment" class="activity-card-img">
+                        <div class="activity-card-body">
+                            <h3>Creative Talents & Entertainment</h3>
+                            <p>Nurturing holistic learner development through cultural sports, music, and performing arts to build strong communication, confidence, and interpersonal leadership skills.</p>
+                            <a href="#" class="read-more-link">Read more →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+    <footer class="site-footer">
+            <div class="footer-container">
+                
+                <div class="footer-column footer-links-panel">
+                    <h3>Useful Resources</h3>
+                    <ul class="resources-list">
+                        <li><a href="https://www.nesa.gov.rw/" target="_blank">National Examination and School Inspection Authority (NESA)</a></li>
+                        <li><a href="https://elearning.reb.rw/" target="_blank">REB E-Learning Portal</a></li>
+                        <li><a href="https://camis.nesa.gov.rw/" target="_blank">CAMIS Portal</a></li>
+                        <li><a href="https://sdms.gov.rw/" target="_blank">School Data Management System (SDMS)</a></li>
+                        <li><a href="https://tmis.reb.rw/" target="_blank">Teacher Management Information System (TMIS)</a></li>
+                    </ul>
+                    
+                    <div class="social-connect-row">
+                        <h4>Connect with us:</h4>
+                        <div class="social-icons-box">
+                            <a href="https://www.facebook.com" target="_blank" class="social-icon-link fb-link" title="Follow us on Facebook">
+                                <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z"/></svg>
+                            </a>
+                            <a href="https://wa.me/250782683932" target="_blank" class="social-icon-link wa-link" title="Chat on WhatsApp">
+                                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L.057 24zm6.59-4.846c1.62.963 3.21 1.462 4.142 1.463 5.408 0 9.811-4.396 9.813-9.799.001-2.597-1.007-5.039-2.839-6.871-1.83-1.832-4.271-2.84-6.874-2.84-5.411 0-9.815 4.401-9.819 9.805-.001 1.969.514 3.89 1.491 5.602l-.408 1.492.494-.492zm13.155-5.937c-.12-.2-.44-.319-.92-.559-.48-.24-2.84-1.401-3.28-1.56-.44-.16-.76-.24-1.08.24-.32.479-1.24 1.56-1.52 1.88-.28.32-.56.359-1.04.119-.48-.24-2.026-.747-3.857-2.38-1.424-1.27-2.385-2.838-2.665-3.317-.28-.48-.03-.739.21-.978.216-.215.48-.559.72-.839.24-.28.32-.479.48-.799.16-.319.08-.599-.04-.839-.12-.24-1.08-2.599-1.48-3.559-.39-.96-.788-.82-1.08-.837-.28-.016-.6-.016-.92-.016s-.84.12-1.28.6c-.44.479-1.68 1.64-1.68 4 0 2.359 1.72 4.639 1.96 4.96.24.32 3.385 5.169 8.199 7.248 1.144.494 2.039.809 2.735 1.031 1.15.365 2.196.314 3.023.19.922-.137 2.84-1.16 3.24-2.279.4-1.12.4-2.079.28-2.279z"/></svg>
+                                <span>+250 782 683 932</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column footer-map-panel">
+                    <h3>School Location Map</h3>
+                    <div class="map-iframe-container">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Kamabare%20Secondary%20School,%20Rwanda&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom-ribbon">
+                <p>&copy; 2026 Groupe Scolaire Kamabare TSS. All Rights Reserved. | Government of the Republic of Rwanda</p>
+            </div>
+        </footer>
+
+        <button id="backToTopBtn" class="back-to-top-box" onclick="jumpToTopFast()" title="Go to top immediately">
+            <svg viewBox="0 0 24 24" class="up-arrow-icon">
+                <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+            </svg>
+            <span class="back-text">Back top</span>
+        </button>
+</html>
