@@ -23,7 +23,7 @@ var images = [
     'gs_kamabare_certification.jpg',
     'gs_kamabare_assembly.jpg',
     'gs_kamabare_group.jpg',
-    'gs_kamabare_olevel.jpg',
+    'gs_kamabare_olevel.jpeg',
     'gs_kamabare_test.jpg'
 ];
 var time = 2500;
