@@ -32,7 +32,6 @@ function changeImg() {
     var slideImg = document.getElementById('home_page');
     if (!slideImg) return;
 
-    // Smooth image transition without white screen flickering or layout collapses
     var nextImg = new Image();
     nextImg.src = images[i];
     nextImg.onload = function() {
@@ -99,8 +98,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================
-   4. FAST IMMEDIATE JUMP BACK TO TOP
+   4. SHOW BACK-TO-TOP BUTTON ONLY UPON SCROLLING
    ========================================== */
+window.addEventListener('scroll', function() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+        if (window.scrollY > 250) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    }
+});
+
 function jumpToTopFast() {
     window.scrollTo({
         top: 0,
