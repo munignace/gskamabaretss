@@ -1,18 +1,20 @@
 /* ==========================================
-   1. MOBILE MENU TOGGLE
+   1. MOBILE MENU TOGGLE INITIALIZATION
    ========================================== */
-const menu = document.querySelector('#mobile-menu');
-const menulinks = document.querySelector('.nav-menu');
+document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('#mobile-menu');
+    const menulinks = document.querySelector('.nav-menu');
 
-if (menu && menulinks) {
-    menu.addEventListener('click', function() {
-        menu.classList.toggle('is-active');
-        menulinks.classList.toggle('active');
-    });
-}
+    if (menu && menulinks) {
+        menu.addEventListener('click', function() {
+            menu.classList.toggle('is-active');
+            menulinks.classList.toggle('active');
+        });
+    }
+});
 
 /* ==========================================
-   2. HERO SLIDESHOW (PRELOAD & SAFE ROTATION)
+   2. HERO SLIDESHOW
    ========================================== */
 var i = 0;
 var images = [
@@ -50,7 +52,7 @@ function changeImg() {
 window.onload = changeImg;
 
 /* ==========================================
-   3. DYNAMIC INFINITE LOOP CAROUSEL LOGIC
+   3. INFINITE CAROUSEL LOGIC
    ========================================== */
 let autoPlayTimer;
 const AUTO_PLAY_INTERVAL = 4000;
@@ -98,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================
-   4. SHOW BACK-TO-TOP BUTTON ONLY UPON SCROLLING
+   4. SCROLL-TRIGGERED BACK-TO-TOP BUTTON
    ========================================== */
 window.addEventListener('scroll', function() {
     const backToTopBtn = document.getElementById('backToTopBtn');
