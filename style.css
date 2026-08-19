@@ -30,7 +30,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 57px; /* ~1.5 cm navbar height */
+    height: 57px;
     width: 100%;
     padding: 0 15px;
     position: relative;
@@ -262,7 +262,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET RESPONSIVE VIEW
+   TABLET RESPONSIVE VIEW (Slide Height Increased by 6cm)
    ========================================================== */
 @media screen and (max-width: 992px) and (min-width: 769px) {
     .navbar {
@@ -312,8 +312,9 @@ html, body {
         display: table;
     }
 
+    /* SLIDESHOW HEIGHT INCREASED BY 6 CM (~227px) FROM 550PX TO 777PX */
     .hero-slider-container {
-        height: 550px;
+        height: 777px;
     }
 
     .features-section {
@@ -340,7 +341,6 @@ html, body {
         justify-content: space-between;
     }
 
-    /* PROMINENT VISIBLE MENU TOGGLE BUTTON */
     .menu-toggle {
         display: block !important;
         position: absolute;
@@ -352,7 +352,6 @@ html, body {
         padding: 5px;
     }
 
-    /* CENTERED HEADER TEXT ON VERY SMALL SCREENS */
     #navbar-logo {
         position: absolute;
         left: 50%;
@@ -396,7 +395,6 @@ html, body {
         border-bottom: 1px solid #2d2f36;
     }
 
-    /* SLIDESHOW HEIGHT INCREASED BY 1.5 CM (~57px) TO 500PX */
     .hero-slider-container {
         height: 500px;
     }
@@ -407,7 +405,6 @@ html, body {
         margin-top: -15px;
     }
 
-    /* TOGGLE ANIMATION FOR HAMBURGER TO X */
     #mobile-menu.is-active .bar:nth-child(2) {
         opacity: 0;
     }
