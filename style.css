@@ -55,7 +55,7 @@ html, body {
     flex-shrink: 0;
 }
 
-/* ABSOLUTELY CENTERED TITLE LIKE REB SITE */
+/* CENTERED TITLE */
 #navbar-logo {
     position: absolute;
     left: 50%;
@@ -116,10 +116,11 @@ html, body {
     transition: all 0.3s ease-out;
 }
 
+/* MENU TOGGLE HAMBURGER BUTTON */
 .menu-toggle {
     display: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1001;
 }
 
 .menu-toggle .bar {
@@ -128,6 +129,8 @@ html, body {
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
     background: var(--white);
+    display: block;
+    border-radius: 2px;
 }
 
 /* HERO SLIDER (Desktop Height) */
@@ -259,7 +262,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET RESPONSIVE VIEW (Slide Extended ~4cm from screen bottom)
+   TABLET RESPONSIVE VIEW
    ========================================================== */
 @media screen and (max-width: 992px) and (min-width: 769px) {
     .navbar {
@@ -268,13 +271,17 @@ html, body {
 
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     #navbar-logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         text-align: center;
     }
 
@@ -288,9 +295,9 @@ html, body {
         top: 57px;
         left: -100%;
         opacity: 0; 
-        transition: all 0.5s ease;
+        transition: all 0.4s ease;
         gap: 0;
-        z-index: 100;
+        z-index: 1000;
     }
 
     .nav-menu.active {
@@ -305,7 +312,6 @@ html, body {
         display: table;
     }
 
-    /* Extended image height on tablet (~4cm from bottom) */
     .hero-slider-container {
         height: 550px;
     }
@@ -323,29 +329,47 @@ html, body {
 }
 
 /* ==========================================================
-   SMARTPHONE RESPONSIVE VIEW (Slide Extended ~2.5cm from screen bottom)
+   SMARTPHONE RESPONSIVE VIEW (~7cm Width Optimizations)
    ========================================================== */
 @media screen and (max-width: 768px) {
     .navbar {
         height: 57px;
-        padding: 0 15px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
+    /* PROMINENT VISIBLE MENU TOGGLE BUTTON */
     .menu-toggle {
-        display: block;
+        display: block !important;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1001;
+        padding: 5px;
     }
 
+    /* CENTERED HEADER TEXT ON VERY SMALL SCREENS */
     #navbar-logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 1.05rem;
+        font-size: 0.92rem;
+        font-weight: 800;
         text-align: center;
+        width: auto;
+        max-width: 55%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .nav-menu {
-        display: grid;
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
         background: var(--darkgray);
         margin: 0;
         width: 100%;
@@ -353,9 +377,10 @@ html, body {
         top: 57px;
         left: -100%;
         opacity: 0; 
-        transition: all 0.5s ease;
+        transition: all 0.4s ease-in-out;
         gap: 0;
-        z-index: 100;
+        z-index: 1000;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
 
     .nav-menu.active {
@@ -367,12 +392,13 @@ html, body {
         text-align: center;
         line-height: 50px;
         width: 100%;
-        display: table;
+        display: block;
+        border-bottom: 1px solid #2d2f36;
     }
 
-    /* Extended image height on smartphone (~2.5cm from bottom) */
+    /* SLIDESHOW HEIGHT INCREASED BY 1.5 CM (~57px) TO 500PX */
     .hero-slider-container {
-        height: 440px;
+        height: 500px;
     }
 
     .features-section {
@@ -381,6 +407,7 @@ html, body {
         margin-top: -15px;
     }
 
+    /* TOGGLE ANIMATION FOR HAMBURGER TO X */
     #mobile-menu.is-active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -653,7 +680,7 @@ html, body {
     border-top: 1px solid #2f3031;
 }
 
-/* BACK-TO-TOP BUTTON (HIDDEN BY DEFAULT, SHOWN ON SCROLL) */
+/* BACK-TO-TOP BUTTON */
 .back-to-top-box {
     position: fixed;
     bottom: 25px;
@@ -663,7 +690,7 @@ html, body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 10px 12px;
-    display: none; /* Initially hidden until scroll */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
