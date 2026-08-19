@@ -18,7 +18,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION HEADER LAYOUT (~1.5 cm HEIGHT) */
+/* NAVIGATION HEADER LAYOUT */
 .nav-container {
     width: 100%;
     background-color: var(--darkgray);
@@ -133,7 +133,7 @@ html, body {
     border-radius: 2px;
 }
 
-/* HERO SLIDER (Desktop Height) */
+/* HERO SLIDER (Desktop Standard Height: 480px) */
 .hero-slider-container {
     position: relative;
     width: 100%;
@@ -262,7 +262,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET RESPONSIVE VIEW (Slide Height Increased by 6cm)
+   TABLET RESPONSIVE VIEW (ONLY THIS HAS +2cm INCREASED HEIGHT)
    ========================================================== */
 @media screen and (max-width: 992px) and (min-width: 769px) {
     .navbar {
@@ -312,9 +312,9 @@ html, body {
         display: table;
     }
 
-    /* SLIDESHOW HEIGHT INCREASED BY 6 CM (~227px) FROM 550PX TO 777PX */
+    /* Tablet Height (+2cm Increase to 852px) */
     .hero-slider-container {
-        height: 777px;
+        height: 852px;
     }
 
     .features-section {
@@ -330,7 +330,7 @@ html, body {
 }
 
 /* ==========================================================
-   SMARTPHONE RESPONSIVE VIEW (~7cm Width Optimizations)
+   SMARTPHONE RESPONSIVE VIEW (Standard Mobile Height: 500px)
    ========================================================== */
 @media screen and (max-width: 768px) {
     .navbar {
