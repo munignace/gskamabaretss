@@ -18,7 +18,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION HEADER LAYOUT (+0.5cm height increase -> 76px base) */
+/* NAVIGATION HEADER LAYOUT (+0.5cm base navbar height -> 76px) */
 .nav-container {
     width: 100%;
     background-color: var(--darkgray);
@@ -262,12 +262,12 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET RESPONSIVE VIEW (+2cm Hero Height & +2mm Navbar Height)
+   TABLET RESPONSIVE VIEW (+2cm Hero Height & Total +4mm Navbar Height)
    ========================================================== */
 @media screen and (max-width: 992px) and (min-width: 769px) {
     .navbar {
-        padding: 23px 15px; /* +2mm added on tablet */
-        min-height: 83.5px;
+        padding: 27px 15px; /* Total +4mm added on tablet navbar */
+        min-height: 91px;
     }
 
     .menu-toggle {
@@ -293,7 +293,7 @@ html, body {
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 83.5px; /* Aligned with tablet navbar height */
+        top: 91px; /* Aligned with tablet 91px navbar height */
         left: -100%;
         opacity: 0; 
         transition: all 0.4s ease;
