@@ -32,6 +32,7 @@ function changeImg() {
     var slideImg = document.getElementById('home_page');
     if (!slideImg) return;
 
+    // Smooth image transition without white screen flickering or layout collapses
     var nextImg = new Image();
     nextImg.src = images[i];
     nextImg.onload = function() {
