@@ -18,7 +18,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION HEADER LAYOUT */
+/* NAVIGATION HEADER LAYOUT (+0.5cm added to height -> 76px) */
 .nav-container {
     width: 100%;
     background-color: var(--darkgray);
@@ -30,7 +30,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 57px;
+    height: 76px; /* Increased by 0.5 cm */
     width: 100%;
     padding: 0 15px;
     position: relative;
@@ -44,9 +44,9 @@ html, body {
 }
 
 .navbar-brand-logo {
-    height: 42px;
-    width: 42px;
-    min-width: 42px;
+    height: 56px; /* Proportionally scaled for 76px navbar */
+    width: 56px;
+    min-width: 56px;
     border-radius: 50%;
     object-fit: contain;
     padding: 2px;
@@ -262,11 +262,11 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET RESPONSIVE VIEW (ONLY THIS HAS +2cm INCREASED HEIGHT)
+   TABLET RESPONSIVE VIEW
    ========================================================== */
 @media screen and (max-width: 992px) and (min-width: 769px) {
     .navbar {
-        height: 57px;
+        height: 76px; /* Updated height */
     }
 
     .menu-toggle {
@@ -292,7 +292,7 @@ html, body {
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 57px;
+        top: 76px; /* Aligned with new 76px navbar height */
         left: -100%;
         opacity: 0; 
         transition: all 0.4s ease;
@@ -312,7 +312,6 @@ html, body {
         display: table;
     }
 
-    /* Tablet Height (+2cm Increase to 852px) */
     .hero-slider-container {
         height: 852px;
     }
@@ -330,11 +329,11 @@ html, body {
 }
 
 /* ==========================================================
-   SMARTPHONE RESPONSIVE VIEW (Standard Mobile Height: 500px)
+   SMARTPHONE RESPONSIVE VIEW
    ========================================================== */
 @media screen and (max-width: 768px) {
     .navbar {
-        height: 57px;
+        height: 76px; /* Updated height */
         padding: 0 12px;
         display: flex;
         align-items: center;
@@ -373,7 +372,7 @@ html, body {
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 57px;
+        top: 76px; /* Aligned with new 76px navbar height */
         left: -100%;
         opacity: 0; 
         transition: all 0.4s ease-in-out;
