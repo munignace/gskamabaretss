@@ -40,13 +40,14 @@ html, body {
 .logo-wrapper {
     display: flex;
     align-items: center;
+    gap: 12px; /* Spacing between logo and title */
     z-index: 2;
 }
 
 .navbar-brand-logo {
-    height: 42px;
-    width: 42px;
-    min-width: 42px;
+    height: 52px;       /* Increased size */
+    width: 52px;        /* Increased size */
+    min-width: 52px;    /* Increased size */
     border-radius: 50%;
     object-fit: contain;
     padding: 2px;
@@ -55,16 +56,15 @@ html, body {
     flex-shrink: 0;
 }
 
-/* CENTERED TITLE */
+/* LEFT-ALIGNED TITLE NEXT TO LOGO */
 #navbar-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;       /* Removes absolute centering */
+    transform: none;        /* Removes centering offset */
     color: var(--white);
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 800;
     white-space: nowrap;
-    text-align: center;
+    text-align: left;
     margin: 0;
     z-index: 5;
 }
@@ -266,7 +266,7 @@ html, body {
    ========================================================== */
 @media screen and (max-width: 992px) and (min-width: 769px) {
     .navbar {
-        padding: 28px 15px; /* +0.5cm (~19px) vertical increase */
+        padding: 28px 15px;
         min-height: 95px;
     }
 
@@ -278,14 +278,6 @@ html, body {
         transform: translateY(-50%);
     }
 
-    #navbar-logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.1rem;
-        text-align: center;
-    }
-
     .nav-menu {
         display: grid;
         grid-template-columns: auto;
@@ -293,7 +285,7 @@ html, body {
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 95px; /* Aligned to match 95px tablet navbar height */
+        top: 95px;
         left: -100%;
         opacity: 0; 
         transition: all 0.4s ease;
@@ -313,7 +305,6 @@ html, body {
         display: table;
     }
 
-    /* Tablet Slider Height (+2cm Height) */
     .hero-slider-container {
         height: 852px;
     }
@@ -354,13 +345,7 @@ html, body {
     }
 
     #navbar-logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         font-size: 0.92rem;
-        font-weight: 800;
-        text-align: center;
-        width: auto;
         max-width: 55%;
         overflow: hidden;
         text-overflow: ellipsis;
