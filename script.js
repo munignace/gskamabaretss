@@ -59,7 +59,7 @@ const AUTO_PLAY_INTERVAL = 4000;
 
 function moveSlide(direction) {
     stopActivityAutoPlay();
-    
+
     const track = document.getElementById('activityTrack');
     if (!track) return;
 
@@ -73,7 +73,7 @@ function moveSlide(direction) {
         const lastCard = cards[cards.length - 1];
         track.insertBefore(lastCard, track.firstChild);
     }
-    
+
     startActivityAutoPlay();
 }
 
