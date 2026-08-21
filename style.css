@@ -74,6 +74,7 @@ img {
     gap: 12px;
 }
 
+/* Logo updated to fit navigation bar height without touching other layout settings */
 .navbar-brand-logo {
     height: 76px;
     width: 100px;
@@ -126,30 +127,6 @@ img {
     background-color: var(--primary-hover);
     color: var(--white);
     transform: translateY(-2px);
-}
-
-/* ==========================================
-   DESKTOP / PC SPECIFIC OVERRIDES (min-width: 769px)
-   ========================================== */
-@media (min-width: 769px) {
-    /* Target the text element next to the logo or push menu items right */
-    .navbar-brand-text {
-        margin-left: 8px; /* Keeps text right next to the logo */
-    }
-
-    .nav-menu {
-        margin-left: auto; /* Moves the navigation links to the far right, leaving GS KAMABARE TSS next to logo */
-    }
-
-    .navbar-brand-logo {
-        height: 120px; /* Taller height matching blue indicator lines */
-        width: 140px;  /* Proportional oval expansion */
-        min-width: 140px;
-        margin-top: -20px; /* Extends above standard header bounds */
-        margin-bottom: -20px; /* Extends below standard header bounds */
-        position: relative;
-        z-index: 1001;
-    }
 }
 
 /* ==========================================
@@ -354,7 +331,7 @@ img {
 }
 
 /* ==========================================
-   RESPONSIVE DESIGN (SMARTPHONES & TABLETS)
+   RESPONSIVE DESIGN
    ========================================== */
 @media (max-width: 768px) {
     .navbar {
