@@ -74,7 +74,6 @@ img {
     gap: 12px;
 }
 
-/* Logo updated to fit navigation bar height without touching other layout settings */
 .navbar-brand-logo {
     height: 76px;
     width: 100px;
@@ -135,7 +134,7 @@ img {
 .hero-slider-container {
     position: relative;
     width: 100%;
-    height: clamp(350px, 50vh, 600px);
+    height: 500px;
     background-color: var(--darkgray);
     overflow: hidden;
 }
@@ -345,6 +344,10 @@ img {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+    }
+
+    .hero-slider-container {
+        height: 350px;
     }
 
     .slide-title {
