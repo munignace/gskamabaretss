@@ -64,7 +64,7 @@ html, body {
     font-size: 1.15rem;
     font-weight: 800;
     white-space: nowrap;
-    
+    text-align: left;
     margin: 0;
     z-index: 5;
 }
