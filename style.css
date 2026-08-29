@@ -137,7 +137,7 @@ html, body {
 .hero-slider-container {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 425px;
     background-color: var(--darkgray);
     overflow: hidden;
 }
