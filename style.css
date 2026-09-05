@@ -18,7 +18,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION HEADER LAYOUT (DESKTOP / PC BASE HEIGHT) */
+/* NAVIGATION HEADER LAYOUT (ORIGINAL PC DISPLAY UNCHANGED) */
 .nav-container {
     width: 100%;
     background-color: var(--darkgray);
@@ -55,18 +55,13 @@ html, body {
     flex-shrink: 0;
 }
 
-/* CENTERED TITLE (GS KAMABARE TSS PLACEMENT - DESKTOP) */
+/* ORIGINAL PC GS KAMABARE TSS PLACEMENT */
 #navbar-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     color: var(--white);
     font-size: 1.15rem;
     font-weight: 800;
     white-space: nowrap;
-    text-align: center;
     margin: 0;
-    z-index: 5;
 }
 
 /* Desktop Navigation Menu Links */
@@ -133,11 +128,10 @@ html, body {
     border-radius: 2px;
 }
 
-/* HERO SLIDER (Desktop Standard Height: 480px) */
+/* ORIGINAL HERO SLIDER (PC DISPLAY UNCHANGED) */
 .hero-slider-container {
     position: relative;
     width: 100%;
-    height: 480px;
     background-color: var(--darkgray);
     overflow: hidden;
 }
@@ -563,7 +557,7 @@ html, body {
         transform: translateY(-50%);
     }
 
-    /* GS KAMABARE TSS PLACEMENT - TABLET */
+    /* GS KAMABARE TSS CENTERED PLACEMENT ON TABLET */
     #navbar-logo {
         position: absolute;
         left: 50%;
@@ -599,7 +593,7 @@ html, body {
         display: table;
     }
 
-    /* TABLET HERO SLIDER HEIGHT */
+    /* TABLET HERO SLIDER HEIGHT ADJUSTMENT */
     .hero-slider-container {
         height: 852px;
     }
@@ -640,7 +634,7 @@ html, body {
         padding: 5px;
     }
 
-    /* GS KAMABARE TSS PLACEMENT - MOBILE */
+    /* GS KAMABARE TSS CENTERED PLACEMENT ON MOBILE */
     #navbar-logo {
         position: absolute;
         left: 50%;
@@ -684,7 +678,7 @@ html, body {
         border-bottom: 1px solid #2d2f36;
     }
 
-    /* MOBILE HERO SLIDER HEIGHT */
+    /* MOBILE HERO SLIDER HEIGHT ADJUSTMENT */
     .hero-slider-container {
         height: 500px;
     }
