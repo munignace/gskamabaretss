@@ -18,7 +18,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION HEADER LAYOUT (DESKTOP / PC BASE HEIGHT) */
+/* NAVIGATION HEADER LAYOUT (DESKTOP) */
 .nav-container {
     width: 100%;
     background-color: var(--darkgray);
@@ -37,12 +37,13 @@ html, body {
     box-sizing: border-box;
 }
 
-/* BRAND CONTAINER: LOGO AND TITLE TOGETHER ON THE LEFT FOR DESKTOP */
+/* BRAND CONTAINER: LOGO & TITLE ALIGNED INLINE ON DESKTOP */
 .brand-container {
     display: flex;
     align-items: center;
     gap: 12px;
     z-index: 2;
+    flex-shrink: 0;
 }
 
 .navbar-brand-logo {
@@ -57,7 +58,7 @@ html, body {
     flex-shrink: 0;
 }
 
-/* TITLE ADJACENT TO LOGO FOR DESKTOP */
+/* SITE TITLE (INLINE WITH LOGO ON DESKTOP) */
 #navbar-logo {
     position: static;
     transform: none;
@@ -67,7 +68,8 @@ html, body {
     white-space: nowrap;
     text-align: left;
     margin: 0;
-    line-height: 1;
+    line-height: 1.2;
+    display: inline-block;
 }
 
 /* Desktop Navigation Menu Links */
@@ -134,7 +136,7 @@ html, body {
     border-radius: 2px;
 }
 
-/* HERO SLIDER (Desktop Standard Height) */
+/* HERO SLIDER SECTION */
 .hero-slider-container {
     position: relative;
     width: 100%;
@@ -263,7 +265,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET & SMARTPHONE RESPONSIVE VIEW (CENTERED BRAND TITLE)
+   MOBILE & TABLET VIEW (TITLE CENTERED BETWEEN LOGO & TOGGLE)
    ========================================================== */
 @media screen and (max-width: 992px) {
     .navbar {
@@ -287,14 +289,14 @@ html, body {
         min-width: 52px;
     }
 
-    /* Absolute centering of title between logo on left and toggle menu on right */
+    /* CENTER TITLE ON MOBILE SCREENS ONLY */
     #navbar-logo {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         white-space: nowrap;
         margin: 0;
         z-index: 10;
@@ -305,9 +307,6 @@ html, body {
     .menu-toggle {
         display: block !important;
         position: relative;
-        right: 0;
-        top: 0;
-        transform: none;
         z-index: 1001;
     }
 
@@ -341,23 +340,6 @@ html, body {
     }
 }
 
-@media screen and (max-width: 992px) and (min-width: 769px) {
-    .hero-slider-container {
-        height: 852px;
-    }
-
-    .features-section {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        margin-top: -30px;
-    }
-
-    .feature-card {
-        padding: 20px 15px;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .navbar {
         min-height: 70px;
@@ -375,7 +357,7 @@ html, body {
     }
 
     .hero-slider-container {
-        height: 500px;
+        height: 400px;
     }
 
     .features-section {
