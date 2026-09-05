@@ -37,10 +37,9 @@ html, body {
     box-sizing: border-box;
 }
 
-/* BRAND CONTAINER: ALWAYS SIDE-BY-SIDE IN A ROW */
+/* BRAND CONTAINER: LOGO AND TITLE TOGETHER ON THE LEFT FOR DESKTOP */
 .brand-container {
     display: flex;
-    flex-direction: row !important; /* Forces logo and title side-by-side on all screens */
     align-items: center;
     gap: 12px;
     z-index: 2;
@@ -58,7 +57,7 @@ html, body {
     flex-shrink: 0;
 }
 
-/* TITLE ADJACENT TO LOGO (RIGHT NEXT TO IT) */
+/* TITLE ADJACENT TO LOGO FOR DESKTOP */
 #navbar-logo {
     position: static;
     transform: none;
@@ -66,7 +65,7 @@ html, body {
     font-size: 1.25rem;
     font-weight: 800;
     white-space: nowrap;
-    text-align: left !important; /* Prevents text from centering under logo */
+    text-align: left;
     margin: 0;
     line-height: 1;
 }
@@ -264,7 +263,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET & SMARTPHONE RESPONSIVE VIEW (INLINE BRAND HEADER)
+   TABLET & SMARTPHONE RESPONSIVE VIEW (CENTERED BRAND TITLE)
    ========================================================== */
 @media screen and (max-width: 992px) {
     .navbar {
@@ -276,14 +275,10 @@ html, body {
         justify-content: space-between;
     }
 
-    /* Container keeps logo and title tightly aligned on the left */
     .brand-container {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        width: auto !important;
-        padding-right: 0 !important;
-        gap: 10px;
+        display: flex;
+        align-items: center;
+        width: auto;
     }
 
     .navbar-brand-logo {
@@ -292,22 +287,27 @@ html, body {
         min-width: 52px;
     }
 
-    /* Keeps title next to logo with proper text truncation for narrow screens */
+    /* Absolute centering of title between logo on left and toggle menu on right */
     #navbar-logo {
-        flex: none;
-        text-align: left !important;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
         font-size: 1.15rem;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin: 0;
+        z-index: 10;
+        width: auto;
+        pointer-events: none;
     }
 
     .menu-toggle {
         display: block !important;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
         z-index: 1001;
     }
 
@@ -365,13 +365,13 @@ html, body {
     }
 
     .navbar-brand-logo {
-        height: 46px;
-        width: 46px;
-        min-width: 46px;
+        height: 44px;
+        width: 44px;
+        min-width: 44px;
     }
 
     #navbar-logo {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .hero-slider-container {
