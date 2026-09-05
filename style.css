@@ -18,9 +18,9 @@ html, body {
     overflow-x: hidden;
 }
 
-/* HERO SLIDER (PC Base Height: 425px) */
+/* HERO SLIDER (425px Desktop / PC Height) */
 #home_page {
-    width: 100%;          
+    width: 100%;         
     height: 425px;        
     object-fit: cover;    
     object-position: center;
@@ -37,7 +37,7 @@ html, body {
     overflow: hidden;
 }
 
-/* NAVIGATION HEADER LAYOUT (PC Base Height & Structure) */
+/* NAVIGATION HEADER LAYOUT */
 .nav-container {
     width: 100%;
     background-color: var(--darkgray);
@@ -57,7 +57,7 @@ html, body {
     position: relative;
 }
 
-/* BRAND CONTAINER: LOGO AND TITLE TOGETHER ON THE LEFT (PC) */
+/* BRAND CONTAINER: LOGO AND TITLE TOGETHER ON THE LEFT */
 .brand-container,
 .logo-wrapper {
     display: flex;
@@ -78,7 +78,7 @@ html, body {
     flex-shrink: 0;
 }
 
-/* TITLE ADJACENT TO LOGO (PC) */
+/* TITLE ADJACENT TO LOGO */
 #navbar-logo {
     position: static;
     transform: none;
@@ -90,7 +90,7 @@ html, body {
     margin: 0;
     line-height: 1;
     cursor: pointer;
-    flex: none;
+    flex: none; /* Prevents text from expanding or centering away from logo */
 }
 
 /* Desktop Navigation Menu Links */
@@ -269,7 +269,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET & SMARTPHONE RESPONSIVE VIEW
+   TABLET & SMARTPHONE RESPONSIVE VIEW (TITLE STAYS NEXT TO LOGO)
    ========================================================== */
 @media screen and (max-width: 992px) {
     .navbar {
@@ -282,6 +282,7 @@ html, body {
         width: 100%;
     }
 
+    /* Keeps logo and text side-by-side on left side on mobile/tablet */
     .brand-container,
     .logo-wrapper {
         display: flex;
