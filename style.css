@@ -18,9 +18,9 @@ html, body {
     overflow-x: hidden;
 }
 
-/* HERO SLIDER (425px Desktop / PC Height) */
+/* HERO SLIDER (425px Desktop / PC Base Height) */
 #home_page {
-    width: 100%;         
+    width: 100%;          
     height: 425px;        
     object-fit: cover;    
     object-position: center;
@@ -37,7 +37,7 @@ html, body {
     overflow: hidden;
 }
 
-/* NAVIGATION HEADER LAYOUT */
+/* NAVIGATION HEADER LAYOUT (PC BASE) */
 .nav-container {
     width: 100%;
     background-color: var(--darkgray);
@@ -57,7 +57,7 @@ html, body {
     position: relative;
 }
 
-/* BRAND CONTAINER: LOGO AND TITLE TOGETHER ON THE LEFT */
+/* BRAND CONTAINER: LOGO AND TITLE TOGETHER ON THE LEFT (PC) */
 .brand-container,
 .logo-wrapper {
     display: flex;
@@ -78,7 +78,7 @@ html, body {
     flex-shrink: 0;
 }
 
-/* TITLE ADJACENT TO LOGO */
+/* TITLE ADJACENT TO LOGO (PC BASE) */
 #navbar-logo {
     position: static;
     transform: none;
@@ -90,7 +90,7 @@ html, body {
     margin: 0;
     line-height: 1;
     cursor: pointer;
-    flex: none; /* Prevents text from expanding or centering away from logo */
+    flex: none;
 }
 
 /* Desktop Navigation Menu Links */
@@ -269,7 +269,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET & SMARTPHONE RESPONSIVE VIEW (TITLE STAYS NEXT TO LOGO)
+   TABLET RESPONSIVE VIEW (Rwanda TVET Board / RTB Display Style)
    ========================================================== */
 @media screen and (max-width: 992px) {
     .navbar {
@@ -282,27 +282,35 @@ html, body {
         width: 100%;
     }
 
-    /* Keeps logo and text side-by-side on left side on mobile/tablet */
+    /* Keep GS KAMABARE TSS centered between Logo and Hamburger menu */
     .brand-container,
     .logo-wrapper {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         width: auto;
         padding-right: 0;
     }
 
     .navbar-brand-logo {
-        height: 48px;
-        width: 48px;
-        min-width: 48px;
+        height: 52px;
+        width: 52px;
+        min-width: 52px;
     }
 
     #navbar-logo {
         flex: none;
         text-align: left;
-        font-size: 1.15rem;
+        font-size: 1.2rem;
         white-space: nowrap;
+        line-height: 1;
+        margin: 0;
+    }
+
+    /* Increased Hero Height for Tablet View (RTB Display) */
+    #home_page,
+    .hero-slider-container {
+        height: 650px;
     }
 
     .menu-toggle {
@@ -341,15 +349,42 @@ html, body {
     }
 }
 
+/* ==========================================================
+   MOBILE PHONE RESPONSIVE VIEW (RTB Mobile Full Height & Card Overlap)
+   ========================================================== */
 @media screen and (max-width: 768px) {
-    #navbar-logo {
-        font-size: 1rem;
+    /* Align GS KAMABARE TSS between Logo and Hamburger Menu on Mobile */
+    .brand-container,
+    .logo-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
+    .navbar-brand-logo {
+        height: 48px;
+        width: 48px;
+        min-width: 48px;
+    }
+
+    #navbar-logo {
+        font-size: 1.05rem;
+        line-height: 1.1;
+    }
+
+    /* Full-screen Hero Height for Mobile Phone RTB layout */
+    #home_page,
+    .hero-slider-container {
+        height: 85vh;
+        min-height: 550px;
+    }
+
+    /* Card overlaps the bottom of the hero image like RTB mobile image */
     .features-section {
         flex-direction: column;
         gap: 20px;
-        margin-top: 20px;
+        margin-top: -50px;
+        z-index: 10;
     }
 
     #mobile-menu.is-active .bar:nth-child(2) {
