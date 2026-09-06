@@ -105,7 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener('scroll', function() {
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
-        if (window.scrollY > 250) {
+        // Displays only after scrolling down 100px from top
+        if (window.scrollY > 100) {
             backToTopBtn.style.display = 'flex';
         } else {
             backToTopBtn.style.display = 'none';
@@ -116,6 +117,6 @@ window.addEventListener('scroll', function() {
 function jumpToTopFast() {
     window.scrollTo({
         top: 0,
-        behavior: 'auto'
+        behavior: 'smooth'
     });
 }
