@@ -21,11 +21,10 @@ html, body {
 /* HERO SLIDER (425px Desktop / PC Base Height) */
 #home_page {
     width: 100%;          
-    height: 425px;        
+    height: 100%;        
     object-fit: cover;    
     object-position: center;
     font-size: 0 !important;
-    background-color: var(--darkgray);
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -35,6 +34,19 @@ html, body {
     height: 425px;
     background-color: var(--darkgray);
     overflow: hidden;
+}
+
+/* DARK OVERLAY TINT (MATCHING RTB STYLE OVERLAY) */
+.hero-slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+    pointer-events: none;
+    z-index: 2;
 }
 
 /* NAVIGATION HEADER LAYOUT (PC BASE) */
@@ -57,7 +69,7 @@ html, body {
     position: relative;
 }
 
-/* BRAND CONTAINER: LOGO AND TITLE TOGETHER ON THE LEFT (PC) */
+/* BRAND CONTAINER */
 .brand-container,
 .logo-wrapper {
     display: flex;
@@ -78,7 +90,6 @@ html, body {
     flex-shrink: 0;
 }
 
-/* TITLE ADJACENT TO LOGO (PC BASE) */
 #navbar-logo {
     position: static;
     transform: none;
@@ -157,7 +168,7 @@ html, body {
     border-radius: 2px;
 }
 
-/* SLIDER CAPTION OVERLAY (STYLING MATCHING RWANDA TVET BOARD STYLE) */
+/* SLIDER CAPTION OVERLAY */
 .static-slider-caption {
     position: absolute;
     bottom: 22%;
@@ -285,7 +296,6 @@ html, body {
         width: 100%;
     }
 
-    /* CENTER GS KAMABARE TSS IN MIDDLE BETWEEN LOGO AND MENU (LIKE MINEDUC) */
     .brand-container {
         display: flex;
         align-items: center;
@@ -309,13 +319,11 @@ html, body {
         min-width: 52px;
     }
 
-    /* INCREASE 3.5cm ON TABLET SCREEN RESOLUTION OF SLIDER HEIGHT */
-    #home_page,
+    /* INCREASED BY 1cm (TOTAL +4.5cm OVER BASE 650px) */
     .hero-slider-container {
-        height: calc(650px + 3.5cm);
+        height: calc(650px + 4.5cm);
     }
 
-    /* PROPORTIONAL CAPTION VIEW ON TABLET */
     .static-slider-caption {
         bottom: 28%;
         width: 92%;
@@ -369,7 +377,6 @@ html, body {
    MOBILE PHONE RESPONSIVE VIEW
    ========================================================== */
 @media screen and (max-width: 768px) {
-    /* CENTER GS KAMABARE TSS IN MIDDLE BETWEEN LOGO AND MENU TOGGLE */
     #navbar-logo {
         position: absolute;
         left: 50%;
@@ -386,14 +393,11 @@ html, body {
         min-width: 48px;
     }
 
-    /* REDUCE/DECREASE 2.5cm OF SLIDER HEIGHT ON SMARTPHONE */
-    #home_page,
     .hero-slider-container {
         height: calc(85vh - 2.5cm);
         min-height: 420px;
     }
 
-    /* REDUCE OVERLAPPING DISTANCE OF THE FIRST CARD BY 0.5cm */
     .features-section {
         flex-direction: column;
         gap: 20px;
@@ -401,7 +405,6 @@ html, body {
         z-index: 10;
     }
 
-    /* PROPORTIONAL CAPTION VIEW ON MOBILE PHONE */
     .static-slider-caption {
         bottom: 25%;
         width: 94%;
@@ -527,15 +530,21 @@ html, body {
     line-height: 1.5;
 }
 
-@media screen and (max-width: 768px) {
+/* CAROUSEL BUTTON POSITION ADJUSTMENT UNDER TITLE TEXT FOR TABLET/MOBILE */
+@media screen and (max-width: 992px) {
     .activities-header {
         flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        gap: 12px;
+        align-items: flex-end;
     }
     .carousel-controls {
-        position: static;
+        position: relative;
+        right: 0;
+        top: 0;
         transform: none;
+        margin-top: 4px;
+        margin-bottom: 12px;
+        align-self: flex-end;
     }
     .activity-card-item {
         min-width: 100%;
