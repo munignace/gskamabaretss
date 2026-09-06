@@ -559,7 +559,27 @@ html, body {
     line-height: 1.5;
 }
 
+/* MAINTAIN 3 CARDS ON TABLET DISPLAY */
 @media screen and (max-width: 992px) {
+    .activities-header {
+        position: relative;
+        align-items: center;
+    }
+    .carousel-controls {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+    .activity-card-item {
+        min-width: 32% !important;
+        max-width: 32% !important;
+    }
+}
+
+/* STACK SINGLE CARD ONLY ON MOBILE PHONES */
+@media screen and (max-width: 600px) {
     .activities-header {
         flex-direction: column;
         gap: 12px;
@@ -575,8 +595,8 @@ html, body {
         align-self: flex-end;
     }
     .activity-card-item {
-        min-width: 100%;
-        max-width: 100%;
+        min-width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
