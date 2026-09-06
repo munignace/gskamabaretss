@@ -157,43 +157,46 @@ html, body {
     border-radius: 2px;
 }
 
-/* SLIDER CAPTION OVERLAY */
+/* SLIDER CAPTION OVERLAY (STYLING MATCHING RWANDA TVET BOARD STYLE) */
 .static-slider-caption {
     position: absolute;
-    bottom: 35px;
-    left: 5%;
-    right: 5%;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
     color: var(--white);
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.85);
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.85);
     z-index: 5;
     pointer-events: none;
-    font-family: "Bookman Old Style", sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
 }
 
 .caption-line-1 {
-    font-size: clamp(1.1rem, 3.2vw, 2.5rem);
-    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    font-weight: 900;
     margin: 0;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.55);
-    display: inline-block;
-    padding: 6px 14px;
-    line-height: 1.2;
+    background-color: transparent;
+    padding: 0;
+    line-height: 1.1;
+    letter-spacing: 1px;
 }
 
 .caption-line-2 {
-    font-size: clamp(0.85rem, 2vw, 1.4rem);
-    font-weight: 400;
+    font-size: clamp(1rem, 2.2vw, 1.8rem);
+    font-weight: 600;
     opacity: 0.95;
-    background-color: rgba(0, 0, 0, 0.55);
-    display: inline-block;
-    padding: 6px 14px;
+    background-color: transparent;
+    padding: 0;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.3;
+    font-style: italic;
 }
 
 /* 3-COLUMN CARDS SECTION */
@@ -269,7 +272,7 @@ html, body {
 }
 
 /* ==========================================================
-   TABLET RESPONSIVE VIEW (Rwanda TVET Board / RTB Display Style)
+   TABLET RESPONSIVE VIEW
    ========================================================== */
 @media screen and (max-width: 992px) {
     .navbar {
@@ -282,14 +285,22 @@ html, body {
         width: 100%;
     }
 
-    /* Keep GS KAMABARE TSS centered between Logo and Hamburger menu */
-    .brand-container,
-    .logo-wrapper {
+    /* CENTER GS KAMABARE TSS IN MIDDLE BETWEEN LOGO AND MENU (LIKE MINEDUC) */
+    .brand-container {
         display: flex;
         align-items: center;
-        gap: 12px;
-        width: auto;
-        padding-right: 0;
+    }
+
+    #navbar-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.3rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        text-align: center;
+        white-space: nowrap;
+        margin: 0;
     }
 
     .navbar-brand-logo {
@@ -298,19 +309,24 @@ html, body {
         min-width: 52px;
     }
 
-    #navbar-logo {
-        flex: none;
-        text-align: left;
-        font-size: 1.2rem;
-        white-space: nowrap;
-        line-height: 1;
-        margin: 0;
-    }
-
-    /* Increased Hero Height for Tablet View (RTB Display) */
+    /* INCREASE 3.5cm ON TABLET SCREEN RESOLUTION OF SLIDER HEIGHT */
     #home_page,
     .hero-slider-container {
-        height: 650px;
+        height: calc(650px + 3.5cm);
+    }
+
+    /* PROPORTIONAL CAPTION VIEW ON TABLET */
+    .static-slider-caption {
+        bottom: 28%;
+        width: 92%;
+    }
+
+    .caption-line-1 {
+        font-size: clamp(1.6rem, 3.8vw, 2.8rem);
+    }
+
+    .caption-line-2 {
+        font-size: clamp(0.95rem, 2vw, 1.4rem);
     }
 
     .menu-toggle {
@@ -350,15 +366,18 @@ html, body {
 }
 
 /* ==========================================================
-   MOBILE PHONE RESPONSIVE VIEW (RTB Mobile Full Height & Card Overlap)
+   MOBILE PHONE RESPONSIVE VIEW
    ========================================================== */
 @media screen and (max-width: 768px) {
-    /* Align GS KAMABARE TSS between Logo and Hamburger Menu on Mobile */
-    .brand-container,
-    .logo-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    /* CENTER GS KAMABARE TSS IN MIDDLE BETWEEN LOGO AND MENU TOGGLE */
+    #navbar-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.15rem;
+        font-weight: 800;
+        text-align: center;
+        white-space: nowrap;
     }
 
     .navbar-brand-logo {
@@ -367,24 +386,33 @@ html, body {
         min-width: 48px;
     }
 
-    #navbar-logo {
-        font-size: 1.05rem;
-        line-height: 1.1;
-    }
-
-    /* Full-screen Hero Height for Mobile Phone RTB layout */
+    /* REDUCE/DECREASE 2.5cm OF SLIDER HEIGHT ON SMARTPHONE */
     #home_page,
     .hero-slider-container {
-        height: 85vh;
-        min-height: 550px;
+        height: calc(85vh - 2.5cm);
+        min-height: 420px;
     }
 
-    /* Card overlaps the bottom of the hero image like RTB mobile image */
+    /* REDUCE OVERLAPPING DISTANCE OF THE FIRST CARD BY 0.5cm */
     .features-section {
         flex-direction: column;
         gap: 20px;
-        margin-top: -50px;
+        margin-top: calc(-50px + 0.5cm);
         z-index: 10;
+    }
+
+    /* PROPORTIONAL CAPTION VIEW ON MOBILE PHONE */
+    .static-slider-caption {
+        bottom: 25%;
+        width: 94%;
+    }
+
+    .caption-line-1 {
+        font-size: clamp(1.3rem, 5.5vw, 2.1rem);
+    }
+
+    .caption-line-2 {
+        font-size: clamp(0.85rem, 3.5vw, 1.1rem);
     }
 
     #mobile-menu.is-active .bar:nth-child(2) {
