@@ -378,7 +378,6 @@ html, body {
         border-bottom: 1px solid #2d2f36;
     }
 
-    /* FULL WIDTH BUTTON STYLING FOR LOGIN & SIGN UP */
     .nav-links-outline {
         display: block !important;
         width: 100% !important;
@@ -559,41 +558,34 @@ html, body {
     line-height: 1.5;
 }
 
-/* MAINTAIN 3 CARDS ON TABLET DISPLAY */
+/* TABLET LAYOUT (992px down to 601px): 
+   - Keeps 3 cards displayed side-by-side proportionally
+   - Places control buttons right under title text without overlap */
 @media screen and (max-width: 992px) {
     .activities-header {
-        position: relative;
+        flex-direction: column;
         align-items: center;
+        gap: 8px;
+        margin-bottom: 25px;
     }
+
     .carousel-controls {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 0;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        justify-content: center;
     }
+
     .activity-card-item {
         min-width: 32% !important;
         max-width: 32% !important;
     }
 }
 
-/* STACK SINGLE CARD ONLY ON MOBILE PHONES */
+/* MOBILE PHONE LAYOUT (600px and below): 
+   - Displays 1 activity card at a time */
 @media screen and (max-width: 600px) {
-    .activities-header {
-        flex-direction: column;
-        gap: 12px;
-        align-items: flex-end;
-    }
-    .carousel-controls {
-        position: relative;
-        right: 0;
-        top: 0;
-        transform: none;
-        margin-top: 4px;
-        margin-bottom: 12px;
-        align-self: flex-end;
-    }
     .activity-card-item {
         min-width: 100% !important;
         max-width: 100% !important;
@@ -754,7 +746,7 @@ html, body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 10px 12px;
-    display: none; /* Hidden by default on page load */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
