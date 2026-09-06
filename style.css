@@ -467,28 +467,24 @@ html, body {
 
 .activities-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 12px;
     max-width: 1200px;
     margin: 0 auto 30px auto;
-    position: relative;
 }
 
 .activities-main-title {
     font-size: 2rem;
     color: var(--darkgray);
     font-weight: 800;
-    flex: 1;
     text-align: center;
 }
 
 .carousel-controls {
     display: flex;
     gap: 8px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    justify-content: center;
 }
 
 .control-btn {
@@ -558,33 +554,15 @@ html, body {
     line-height: 1.5;
 }
 
-/* TABLET LAYOUT (992px down to 601px): 
-   - Keeps 3 cards displayed side-by-side proportionally
-   - Places control buttons right under title text without overlap */
+/* TABLET LAYOUT: Maintains 3 cards side-by-side */
 @media screen and (max-width: 992px) {
-    .activities-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 25px;
-    }
-
-    .carousel-controls {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        justify-content: center;
-    }
-
     .activity-card-item {
         min-width: 32% !important;
         max-width: 32% !important;
     }
 }
 
-/* MOBILE PHONE LAYOUT (600px and below): 
-   - Displays 1 activity card at a time */
+/* MOBILE PHONE LAYOUT: Displays 1 card at a time */
 @media screen and (max-width: 600px) {
     .activity-card-item {
         min-width: 100% !important;
