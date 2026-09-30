@@ -110,8 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function runCounterAnimation() {
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-target');
-            const duration = 2000; // Total duration in milliseconds
-            const increment = target / (duration / 16); // 60 FPS update rate
+            const duration = 2000; // Duration in ms
+            const increment = target / (duration / 16); // ~60fps
 
             let current = 0;
             const updateCount = () => {
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Scroll trigger using IntersectionObserver
+    // Trigger counter when user scrolls into view
     if (statsSection) {
         const observer = new IntersectionObserver((entries) => {
             const [entry] = entries;
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 hasAnimated = true;
                 runCounterAnimation();
             }
-        }, { threshold: 0.3 });
+        }, { threshold: 0.2 });
 
         observer.observe(statsSection);
     }
