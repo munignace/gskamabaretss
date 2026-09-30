@@ -100,7 +100,49 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================
-   4. SCROLL-TRIGGERED BACK-TO-TOP BUTTON
+   4. SCROLL-TRIGGERED ANIMATED COUNTER
+   ========================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.green-counter');
+    const statsSection = document.getElementById('stats-section');
+    let hasAnimated = false;
+
+    function runCounterAnimation() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000; // Total duration in milliseconds
+            const increment = target / (duration / 16); // 60 FPS update rate
+
+            let current = 0;
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    }
+
+    // Scroll trigger using IntersectionObserver
+    if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                runCounterAnimation();
+            }
+        }, { threshold: 0.3 });
+
+        observer.observe(statsSection);
+    }
+});
+
+/* ==========================================
+   5. SCROLL-TRIGGERED BACK-TO-TOP BUTTON
    ========================================== */
 window.addEventListener('scroll', function() {
     const backToTopBtn = document.getElementById('backToTopBtn');
