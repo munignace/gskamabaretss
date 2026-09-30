@@ -3,7 +3,7 @@
     --brightred: #F9423D;
     --white: #fff;
     --lightred: #f9433dcc;
-    --statgreen: #2d8a4e;
+    --statgreen: #25d366; /* Vibrant Green for animated counter numbers */
 }
 
 /* GLOBAL RESET & SCROLL FIX */
@@ -283,9 +283,7 @@ html, body {
     fill: var(--white);
 }
 
-/* ==========================================================
-   TABLET & MOBILE RESPONSIVE NAVIGATION & BUTTONS
-   ========================================================== */
+/* TABLET & MOBILE RESPONSIVE NAVIGATION & BUTTONS */
 @media screen and (max-width: 992px) {
     .navbar {
         padding: 10px 20px;
@@ -582,76 +580,81 @@ html, body {
     color: #ffffff !important;
 }
 
-/* SCHOOL STATISTICS SECTION */
+/* ==========================================================
+   SCHOOL STATISTICS SECTION (MATCHES UPLOADED BANNER DESIGN)
+   ========================================================== */
 .school-stats-section {
     background-color: #ffffff;
-    padding: 60px 5%;
+    padding: 50px 0 0 0;
     width: 100%;
     box-sizing: border-box;
-    border-top: 1px solid #eaeaea;
-}
-
-.stats-container {
-    max-width: 1200px;
-    margin: 0 auto;
     text-align: center;
 }
 
 .stats-main-title {
     font-size: 2.2rem;
-    color: var(--darkgray);
+    color: #0056b3;
     font-weight: 800;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
-.stats-grid {
+/* Full Width Dark Blue Strip Banner */
+.stats-banner-wrapper {
+    background: linear-gradient(180deg, #004080 0%, #002b55 100%);
+    width: 100%;
+    padding: 35px 5%;
+    box-sizing: border-box;
+}
+
+.stats-container {
+    max-width: 1300px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
 }
 
-.stat-card {
+.stat-item {
     flex: 1;
-    min-width: 200px;
-    padding: 20px;
-    background-color: #fdfdfd;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border-bottom: 4px solid var(--statgreen);
-    transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
+    min-width: 180px;
+    text-align: center;
+    padding: 10px;
 }
 
 .green-counter {
     display: block;
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 900;
-    color: var(--statgreen);
+    color: var(--statgreen); /* Vibrant Green Color */
     line-height: 1;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
 }
 
 .stat-label {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--darkgray);
-    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin: 0;
+    opacity: 0.95;
 }
 
 @media screen and (max-width: 768px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .stats-container {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
     }
     .green-counter {
         font-size: 2.8rem;
+    }
+    .stat-label {
+        font-size: 0.85rem;
     }
 }
 
